@@ -15,27 +15,37 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="weather-app">
-      <div class="container">
-        <h1>City, State</h1>
-        <ul>
-          <li>Day and Time</li>
-          <li>Condition</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Sunny"
-            />
-            Placeholder temp ºC | ºF
-          </div>
-          <div class="col-6">
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>City, State</h1>
             <ul>
-              <li>Precipitation: Placeholder%</li>
-              <li>Humidity: Placeholder %</li>
-              <li>Wind: Placeholder km/h</li>
+              <li>Day and Time</li>
+              <li>Condition</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Sunny"
+                  class="float-left"
+                />
+                <span class="float-left">
+                  <strong>60</strong
+                  ><span class="units"> ºC | <a href="#">ºF</a></span>
+                </span>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: Placeholder%</li>
+                <li>Humidity: Placeholder %</li>
+                <li>Wind: Placeholder km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
