@@ -14,9 +14,37 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Weather App</h1>
+    <div class="weather-app">
+      <div class="container">
+        <h1>City, State</h1>
+        <ul>
+          <li>Day and Time</li>
+          <li>Condition</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="Sunny"
+            />
+            Placeholder temp ºC | ºF
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: Placeholder%</li>
+              <li>Humidity: Placeholder %</li>
+              <li>Wind: Placeholder km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+    <small>
+      <a href="https://github.com/Nhenely/weather-app-final" target="_blank"
+        >Open-source code </a
+      >by Nicole Henely
+    </small>
+
     <script src="src/app.js"></script>
   </body>
 </html>
