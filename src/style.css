@@ -28,7 +28,7 @@ li:first-letter {
   text-transform: capitalize;
 }
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 500px;
   margin: 30px auto;
 }
 .weather-app {
@@ -41,8 +41,8 @@ li:first-letter {
 }
 .weather-temperature img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 80px;
+  width: 80px;
 }
 .weather-temperature strong {
   color: rgb(33, 33, 33);
