@@ -108,31 +108,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-function displayCelciusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let minElement = document.querySelector("#min");
-  let maxElement = document.querySelector("#max");
-  fahrenheitLink.classList.remove("active");
-  celciusLink.classList.add("active");
-  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  let celciusMin = ((fahrenheitMin - 32) * 5) / 9;
-  let celciusMax = ((fahrenheitMax - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-  minElement.innerHTML = Math.round(celciusMin);
-  maxElement.innerHTML = Math.round(celciusMax);
-}
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  fahrenheitLink.classList.add("active");
-  celciusLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let minElement = document.querySelector("#min");
-  let maxElement = document.querySelector("#max");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  minElement.innerHTML = Math.round(fahrenheitMin);
-  maxElement.innerHTML = Math.round(fahrenheitMax);
-}
 
 let fahrenheitTemperature = null;
 let fahrenheitMin = null;
@@ -140,11 +115,5 @@ let fahrenheitMax = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelciusTemp);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 search("Minneapolis");
