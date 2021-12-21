@@ -73,20 +73,14 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let conditionElement = document.querySelector("#condition");
-  let minElement = document.querySelector("#min");
-  let maxElement = document.querySelector("#max");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
   fahrenheitTemperature = response.data.main.temp;
-  fahrenheitMin = response.data.main.temp_min;
-  fahrenheitMax = response.data.main.temp_max;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   cityElement.innerHTML = response.data.name;
-  minElement.innerHTML = Math.round(fahrenheitMin);
-  maxElement.innerHTML = Math.round(fahrenheitMax);
   conditionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -110,8 +104,6 @@ function handleSubmit(event) {
 }
 
 let fahrenheitTemperature = null;
-let fahrenheitMin = null;
-let fahrenheitMax = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
